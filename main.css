@@ -59,6 +59,8 @@ a:hover {
         color: #fff;
     }
 
+
+
 .intro {
     background: var(--dkviolet);
     height: 600px;
@@ -254,6 +256,43 @@ a:hover {
     .top-menu{
         position: relative;
     }
+
+    .top-menu .container {
+        padding: 0;
+    }
+    .collapse {
+        margin-top: 30px;
+    }
+    .navbar-collapse {
+        background: var(--dkgray);
+        transition: 0s;
+
+    }
+
+    .show {
+        height: 100vh;
+        background: var(--dkgray);
+        color: #fff;
+    }
+
+        .show ul {
+            padding-top: 30px;
+            
+        }
+
+        .show ul li{
+            padding: 20px 0 20px 0;
+        }
+
+        .show ul li a{
+            color: #fff;
+        }
+
+        .show ul .button{
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
 
     .pattern-intro-right {
         display: none;
