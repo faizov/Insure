@@ -15,7 +15,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'DM Serif Display', serif;
+    font-family: 'DM Serif Display';
+    font-weight: 400;
     color: var(--vdkviolet);
 }
 
@@ -28,9 +29,17 @@ a:hover {
     text-decoration: none;
 }
 
+.container {
+    max-width: 1440px;
+}
+
 .top-menu {
+    position: absolute;
+    background: #fff;
     text-transform: uppercase;
-    padding: 20px 200px 20px 200px;
+    width: 100%;
+    z-index: 2;
+    padding: 30px 0 30px 0;
 
 }
 
@@ -42,6 +51,7 @@ a:hover {
     .top-menu .button{
         border: 2px solid #000;
         padding: 10px 25px 10px 25px;
+        color: #000;
     }
 
     .top-menu .button:hover{
@@ -52,13 +62,11 @@ a:hover {
 .intro {
     background: var(--dkviolet);
     height: 600px;
-    padding: 20px 200px 20px 200px;
-}
-
+    z-index: 0;
 }
 
     .intro .intro-text {
-        width: 55%;
+        width: 70%;
     }
 
     .intro .intro-text h1{
@@ -67,20 +75,314 @@ a:hover {
         
     }
 
-    .intro hr {
+    .intro .intro-text p {
+        color: #fff;
+        font-weight: 400;
+    }
+
+    .intro .hr {
+        width: 30%;
+        height: 1px;
         background: #fff;
         margin-bottom: 3em;
     }
 
     .intro .row {
-        padding-top: 100px;
+        padding-top: 150px;
+    }
+
+    .intro .button{
+        border: 2px solid #fff;
+        padding: 10px 40px 10px 40px;
+        background: transparent;
+        color: #fff;
+    }
+
+    .intro .button:hover{
+        background: #fff;
+        color: #000;
+    }
+
+    .intro .pattern-intro-right {
+        position: absolute;
+        top: 0;
+        right: 0;   
+        z-index: 1;
+    }
+
+    .intro .intro-image {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .intro .bg-pattern-intro-right-mobile {
+        display: none;
+    }
+
+.bg-pattern-intro-left {
+    position: absolute;
+    top: 450px;
+    left: 0;   
+    z-index: 1;
+}
+
+.services {
+    margin-top: 300px;
+    margin-bottom: 200px;
+}
+
+    .services .hr {
+        width: 10%;
+        height: 1px;
+        background: var(--grayblue);
+    }
+
+    .services h1 {
+        font-size: 4em;
+        margin: 1em 0 1em 0;
+    }
+
+.work {
+    margin-bottom: 150px;
+}
+
+    .work .block-work {
+        background: var(--dkviolet);
+        padding: 50px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .work .block-work h1 {
+        color: #fff;
+        font-size: 4.5em;
+    }
+
+    .work .block-work .button {
+        border: 2px solid #fff;
+        padding: 10px 40px 10px 40px;
+        background: transparent;
+        color: #fff;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .work .block-work .button:hover{
+        background: #fff;
+        color: #000;
+    }
+
+    .work .block-work .pattern-intro-right {
+        position: absolute;
+        right: -50px;   
+        bottom: -200px;
+    }
+
+    .work .block-work .bg-pattern-how-we-work-mobile {
+        display: none;
+    }
+    
+.footer {
+    background: var(--vltgray);
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+    text-transform: uppercase;
+}
+
+    .footer .pattern-intro-right {
+        position: absolute;
+        top: 0px;
+
+    }
+
+    .footer .bg-pattern-footer-mobile {
+        display: none;
+    }
+
+    .footer h3 {
+        font-size: 1em;
+        padding-bottom: 20px;
+        color: var(--dkgrayviolet);
+    }
+
+    .footer hr {
+        margin: 1em 0 2em 0;
+    }
+
+    .footer .nav-item {
+        margin: 0 10px 0 10px;
+    }
+
+    .footer .navbar {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer .links {
+        align-self: start;
+        margin-left: auto;
+    }
+
+    .footer ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer .nav-item a:hover {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(30%) contrast(103%);
+    }
+
+    .footer .footer-menu ul li {
+        padding: 5px 0px 5px 0px;
+    }
+
+    .footer ul li a {
+        color: #000;
+        font-weight: 700;
+    }
+
+    .footer ul li a:hover {
+        color: #000;
+        text-decoration: underline;
+    }
+
+/* media*/
+
+@media screen and (max-width: 500px) {
+    .top-menu{
+        position: relative;
     }
 
     .pattern-intro-right {
-
-        position: absolute;
-
-        right: 0;
-        
-        
+        display: none;
     }
+
+    .intro {
+        height: auto;
+    }
+
+    .intro .row {
+        padding: 0;
+    }
+
+    .intro .mobile-img{
+        order: 1;
+        padding: 0;
+    }
+
+    .intro .mobile-text{
+        order: 2;
+        padding: 0;
+    }
+
+    .intro .hr {
+        display: none;
+    }
+
+    .intro .intro-image {
+        background: url(images/image-intro-mobile.jpg) no-repeat;
+        background-size: auto;
+        min-height: 63vh;
+        width: 100%;
+        z-index: 0;
+        position: relative;
+    }
+
+    .intro .intro-image img {
+        display: none;
+    }
+
+    .bg-pattern-intro-left {
+        display: none;
+    }
+
+    .intro .intro-text {
+        position: relative;
+        background: url(images/bg-pattern-intro-left-mobile.svg) no-repeat top left;
+        padding: 10rem 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .intro .bg-pattern-intro-right-mobile {
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+
+
+    .intro .intro-text h1 {
+        font-size: 2em;
+    }
+
+    .services {
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .services h1 {
+        font-size: 3em;
+        margin: 1em 0 1em 0;
+    }
+
+    .services .hr {
+        width: 30%;
+    }
+
+    .block-work {
+        text-align: center;
+    }
+
+    .work .block-work h1 {
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+
+    .work {
+        margin-bottom: 100px;
+    }
+
+    .work .block-work .bg-pattern-how-we-work-mobile {
+        display: block;
+        position: absolute;
+        right: 0;   
+        top: -110px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .navbar-brand {
+        padding: 10px 0 10px 0;
+    }
+
+    .footer .links {
+        margin-left: inherit;
+    }
+
+    .footer hr {
+        margin: 2em 0 2em 0;
+    }
+
+    .footer ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer .bg-pattern-footer-mobile {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0;
+    }
+  }
