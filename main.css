@@ -33,6 +33,10 @@ a:hover {
     max-width: 1440px;
 }
 
+.bg-pattern-mobile-nav {
+    display: none;
+}
+
 .top-menu {
     position: absolute;
     background: #fff;
@@ -252,6 +256,16 @@ a:hover {
 
 /* media*/
 
+@media screen and (max-width: 1440px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .intro .intro-text {
+        width: 90%;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .top-menu{
         position: relative;
@@ -261,6 +275,7 @@ a:hover {
         padding: 0;
     }
     .collapse {
+        position: relative;
         margin-top: 30px;
     }
     .navbar-collapse {
@@ -269,8 +284,23 @@ a:hover {
 
     }
 
+    .bg-pattern-mobile-nav {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .top-menu .navbar-brand {
+        margin-left: 20px !important;
+    }
+
+    .top-menu .navbar-toggler {
+        margin-right: 20px !important;
+    }
+
     .show {
-        height: 100vh;
+        height: 90vh;
         background: var(--dkgray);
         color: #fff;
     }
@@ -322,7 +352,7 @@ a:hover {
 
     .intro .intro-image {
         background: url(images/image-intro-mobile.jpg) no-repeat;
-        background-size: auto;
+        background-size: cover;
         min-height: 63vh;
         width: 100%;
         z-index: 0;
@@ -369,6 +399,7 @@ a:hover {
 
     .services .hr {
         width: 30%;
+        transform: translateX(120%);
     }
 
     .block-work {
