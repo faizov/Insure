@@ -132,6 +132,10 @@ a:hover {
     z-index: 1;
 }
 
+.mobile-text {
+ z-index: 2;   
+}
+
 .services {
     margin-top: 300px;
     margin-bottom: 200px;
